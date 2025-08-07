@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML Form with CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="/submit" method="post">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="display:inline;">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="display:inline;">Female</label>
+            </div>
+
+            <div class="form-group">
+                <label>Interests:</label>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports" style="display:inline;">Sports</label><br>
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music" style="display:inline;">Music</label><br>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading" style="display:inline;">Reading</label>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
+
